@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState } from "react";
+import { HeadContainer } from "./Components/Header";
+import { BodyContainer } from "./Components/Body";
+import { Footer } from "./Components/footer";
 
 function App() {
+  const [linkList, setLinkList] = useState(new Map());
+  const [lastLink, setLastLink] = useState();
+  const inputLink = (link) => {
+    setLastLink(link);
+    const copy = linkList;
+    if (copy.has(link)) return;
+    copy.set(link, link);
+    setLinkList(copy);
+    console.log(linkList);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HeadContainer />
+      <BodyContainer inputLink={inputLink} lastLink={lastLink} />
+      <Footer />
     </div>
   );
 }
