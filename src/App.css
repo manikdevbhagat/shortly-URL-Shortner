@@ -18,6 +18,7 @@ body,
   background-color: black;
   color: white;
 }
+
 h1,
 h2,
 h3,
@@ -67,12 +68,12 @@ ul {
   flex-basis: 75%;
   justify-content: space-between;
 }
-.body-text{
+.body-text {
   display: flex;
   flex-direction: column;
   flex-basis: 50%;
 }
-.body-text > h1{
+.body-text > h1 {
   flex-basis: 40%;
 }
 .input-field {
@@ -114,22 +115,22 @@ ul {
   justify-content: space-between;
   align-items: center;
   background-color: black;
-  border-radius: 10px;
+  border-radius: 15px;
 }
-.input-link{
+.input-link {
   color: white;
   font-size: small;
   display: inline-block;
   word-wrap: break-word;
   width: 60%;
 }
-.output-link{
+.output-link {
   color: lightseagreen;
   flex-basis: 30%;
   margin: 0 10px;
   text-align: center;
 }
-.copy-button{
+.copy-button {
   border-radius: 10px;
 }
 
@@ -152,4 +153,8 @@ ul {
 .footer-list {
   list-style: none;
   padding: 0;
+}
+
+.links {
+  color: white;
 }
